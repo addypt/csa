@@ -162,7 +162,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input name="title" type="text" class="form-control">
+                                    <input name="name" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>

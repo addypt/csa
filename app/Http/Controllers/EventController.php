@@ -35,23 +35,32 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate(request(), [
-        //     'title' => 'required',
-        //     'description'  => 'required',
-        //     'date' => 'required',
-        //     'time' => 'required',
-        //     'id' => 'required'
-        // ]);
-        dd($request);    
+        $this->validate(request(), [
+            'name' => 'required',
+            'description'  => 'required',
+            'date' => 'required',
+            'time' => 'required',
+            'lh' => 'required'
+        ]);
+        //Check for conflicting event
+        $events = Event::where('lh', '=', $request->lh)
+                        ->where('time', '=', $request->time)
+                        ->where('date', '=', $request->date)->get();
+        if(sizeof($events) != 0){
+            $events['error'] = True;
+            return $events;
+        }
+        else{
         $event = new Event;
-        $event->title = $request->title;
+        $event->name = $request->name;
         $event->description = $request->description;
         $event->date = $request->date;
         $event->time = $request->time;
-        $event->id = $request->id;
-        $post->save();
-
-        return $post;
+        $event->lh = $request->lh;
+        $event->save();
+        return $event;
+        }
+        
     }
 
     /**
