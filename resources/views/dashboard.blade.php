@@ -113,13 +113,14 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="" method="post" action="#">
+            <form method="POST" action="/event/create">
+                @csrf
                         <div class="form-group">
                             <label class="cols-sm-2 control-label">Date</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input type="Date" class="form-control">
+                                    <input name="date" type="Date" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -128,7 +129,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                     <select name="" class="form-control">
+                                     <select name="lh" class="form-control">
                                           <option value="1">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
@@ -152,7 +153,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input type="Time" class="form-control">
+                                    <input name="time" type="Time" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -161,7 +162,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control">
+                                    <input name="title" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -170,15 +171,16 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control">
+                                    <input name="description" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Register</button>
                     </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Register</button>
+            
       </div>
     </div>
   </div>
