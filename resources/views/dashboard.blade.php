@@ -149,11 +149,20 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="cols-sm-2 control-label">Time</label>
+                            <label class="cols-sm-2 control-label">Start Time</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input name="time" type="Time" class="form-control">
+                                    <input name="start" type="Time" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="cols-sm-2 control-label">End Time</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
+                                    <input name="end" type="Time" class="form-control">
                                 </div>
                             </div>
                         </div>

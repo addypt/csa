@@ -22,3 +22,4 @@ Route::get('/csa', 'CsaHomeController@index');
 Route::get('/dashboard', 'DashboardController@index');
 
 Route::post('/event/create', 'EventController@store');
+Route::post('/event/check', 'EventController@check');

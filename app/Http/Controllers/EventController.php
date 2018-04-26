@@ -14,7 +14,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = App\Event::where('date', '>=', date('Y/m/d', time()))->get();
+        return $events;
     }
 
     /**
@@ -25,6 +26,24 @@ class EventController extends Controller
     public function create()
     {
         //
+    }
+    public function check(Request $request){
+        $this->validate(request(), [
+            'date' => 'required',
+            'time' => 'required',
+            'lh' => 'required'
+        ]);
+        //Check for conflicting event
+        $events = Event::where('lh', '=', $request->lh)
+                        ->where('start', '>=', $request->start)
+                        ->where('end', '>=', $request->end)
+                        ->where('date', '=', $request->date)->get();
+        if(sizeof($events) != 0){
+            return ['conflict' => True];
+        }
+        else{
+            return ['conflict' => False];
+        }
     }
 
     /**
@@ -39,12 +58,14 @@ class EventController extends Controller
             'name' => 'required',
             'description'  => 'required',
             'date' => 'required',
-            'time' => 'required',
+            'start' => 'required',
+            'end' => 'required',
             'lh' => 'required'
         ]);
         //Check for conflicting event
         $events = Event::where('lh', '=', $request->lh)
-                        ->where('time', '=', $request->time)
+                        ->where('start', '>=', $request->start)
+                        ->where('end', '>=', $request->end)
                         ->where('date', '=', $request->date)->get();
         if(sizeof($events) != 0){
             $events['error'] = True;
@@ -55,7 +76,8 @@ class EventController extends Controller
         $event->name = $request->name;
         $event->description = $request->description;
         $event->date = $request->date;
-        $event->time = $request->time;
+        $event->start = $request->start;
+        $event->end = $request->end;
         $event->lh = $request->lh;
         $event->save();
         return $event;
@@ -82,7 +104,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        
     }
 
     /**
