@@ -23,3 +23,8 @@ Route::get('/dashboard', 'DashboardController@index');
 
 Route::post('/event/create', 'EventController@store');
 Route::post('/event/check', 'EventController@check');
+Route::post('/events', 'EventController@index');
+Route::get('/events', 'EventController@index');
+
+Route::post('/events/{user}', 'EventController@userEvents');
+Route::get('/events/{user}', 'EventController@userEvents');

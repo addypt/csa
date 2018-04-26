@@ -42,7 +42,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item btn-default" href="{{ route('logout') }}"
+                            <a class="dropdown-item btn-default " href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
@@ -68,9 +68,98 @@
         </div>
     </div>
       <!--NAVBAR SECTION END-->
-      
+      <!---below navbar of home page-->
+ <!---today-->
+ <div class="navbar-default sidebar" role="navigation" style="width: 20%;margin-top: 5%">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="sidebar" id="sidebar" style="list-style-type:none">
+            <li>
+                <h3 class="active">What We Offer</h3>
+            </li>
+            <li>
+                <a href="index.html" class="active">Technical</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Academics</a>
+            </li>
+             <li>
+                <a href="index.html" class="active">Cultural</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Sports</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Adventure</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Mountaineering</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Cycling</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">SPIC MACKAY</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Counselling</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Life Skills</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Gymnasium</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Inter Nit Innovation</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Mess and Hostel Facilities</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Accounts and Billing</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Training and Placements</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Forms and Recomendations</a>
+            </li>
+        </ul>
+    </div>
+</div>        
+<!------>
 
-////////////////// hhhhhhhhhhhhhhh/////////////////
+      
+<div style="margin-left : 75%; margin-top : -42%">     
+            <div class="col-md-10 message">
+            <br>
+            <div class="row">
+                <div class="box-content btn btn-primary" id="x" style="width: 100%">
+                    <h5>Upcomming Events</h5>
+                </div>
+                <div class="box-content" id="x" style="background-color: #fff;">
+                    <marquee id="marquee1" direction = "up" onmouseover="this.stop();" onmouseout="this.start();" style="text-align: center;">
+                        <p><a href="">Farewell</a></p>
+                        <p><a href="">Independence day</a></p>
+                        <p><a href="">Dahi handi</a></p>
+                    </marquee>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="box-content btn btn-primary" id="x" style="width: 100%">
+                    <h5>Recent Events</h5>
+                </div>
+                <div class="box-content" id="x" style="background-color: #fff">
+                    <marquee direction = "up" onmouseover="this.stop();" onmouseout="this.start();" style="text-align: center;">
+                        <p><a href="">Election</a></p>
+                        <p><a href="">Institute Festival</a></p>
+                        <p><a href="">Intitite Gathering</a></p>
+                        <p><a href="">Departmental Gathering</a></p></marquee>
+                </div>
+            </div>
+        </div>
+
                 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -152,9 +241,7 @@
 
 
      <!-- CONTACT SECTION END-->
-    <div id="footer">
-          &copy 2014 yourdomain.com | All Rights Reserved |  <a href="http://binarytheme.com" style="color: #fff" target="_blank">Design by : binarytheme.com</a>
-    </div>
+
      <!-- FOOTER SECTION END-->
    
     <!--  Jquery Core Script -->
@@ -169,5 +256,6 @@
     <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
     <!--  Custom Scripts --> 
          <script src="{{ asset('js/custom.js') }}"></script>
+         <script src="{{ asset('js/sh.js') }}"></script>
 </body>
 </html>

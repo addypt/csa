@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $fillable = ['lh', 'title', 'description', 'start', 'end', 'date'];
+    protected $fillable = ['lh', 'userid', 'title', 'type', 'description', 'start', 'end', 'date'];
 }
+

@@ -26,15 +26,17 @@
 
         <!-- Custom Fonts -->
         <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script>
+            uid = {{ Auth::user()->id }}
+        </script>
     </head>
-    <body>
+    <body background="{{ asset('img/college.jpg') }}">
 
         <div id="wrapper">
 
@@ -97,6 +99,52 @@
                             </li>
                             <li>
                                 <a href="" class="active" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-support fa-tasks"></i>  Book Lecture Hall </a>
+                            </li>
+                            <!----today---->
+                            <li>
+                                <a href="" class="active" data-toggle="modal" data-target="#booking"><i class="fa fa-support fa-tasks"></i> Your Booking </a>
+                            </li>  
+                            <li style="margin-top: 85%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li style="line-height: 10%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li>
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li style="line-height: 10%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li> 
+                            <li>
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li style="line-height: 10%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li> 
+                            <li>
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li style="line-height: 10%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li> 
+                            <li>
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li style="line-height: 10%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li> 
+                            <li>
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li style="line-height: 10%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li>
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
+                            </li>
+                            <li style="line-height: 10%">
+                                <a href="" class="active" data-toggle="modal" data-target="#exampleModal"></a>
                             </li>
                         </ul>
                     </div>
@@ -184,6 +232,32 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="cols-sm-2 control-label">Type</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
+                                     <select name="type" class="form-control">
+                                          <option value="Technical">Technical</option>
+                                          <option value="Academics">Academics</option>
+                                          <option value="Cultural">Cultural</option>
+                                          <option value="Technical">Technical</option>
+                                          <option value="Sports">Sports</option>
+                                          <option value="Adventure">Adventure</option>
+                                          <option value="Mountaineering">Mountaineering</option>
+                                          <option value="Cycling">Cycling</option>
+                                          <option value="SPIC MACKAY">SPIC MACKAY</option>
+                                          <option value="Counselling">Counselling</option>
+                                          <option value="Life Skills">Life Skills</option>
+                                          <option value="Inter Nit Innovation">Inter Nit Innovation</option>
+                                          <option value="Mess and Hostel Facilities">Mess and Hostel Facilities</option>
+                                          <option value="Accounts and Billing">Accounts and Billing</option>
+                                          <option value="Training and Placements">Training and Placements</option>
+                                          <option value="Forms and Recomendation">Forms and Recomendation</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Register</button>
                     </form>
@@ -195,6 +269,21 @@
   </div>
 </div>    
         </div>
+        <div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel1">Lecture Hall Registration</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ol id="mybook">
+                        
+                  </ol>
+                </div>
+          </div>
         <!-- /#wrapper -->
 
         <!-- jQuery -->
@@ -213,6 +302,8 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="/js/startmin.js"></script>
+        <script src="/js/dash.js"></script>
+
 
     </body>
 </html>
