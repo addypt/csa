@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'CsaHomeController@index') ;
 Route::get('/csa', 'CsaHomeController@index');
 Route::get('/dashboard', 'DashboardController@index');
 
@@ -28,3 +28,4 @@ Route::get('/events', 'EventController@index');
 
 Route::post('/events/{user}', 'EventController@userEvents');
 Route::get('/events/{user}', 'EventController@userEvents');
+Route::get('/event/{event}', 'EventController@show');

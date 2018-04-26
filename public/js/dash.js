@@ -1,3 +1,4 @@
+$('form').each(function() { this.reset() });
 mar = document.getElementById('mybook');
 x = {};
 fetch('/events/' + uid)
@@ -16,7 +17,7 @@ fetch('/events/' + uid)
             var att = document.createAttribute("href");       // Create a "class" attribute
             att.value = "/event/" + event.id;                           // Set the value of the class attribute
             a.setAttributeNode(att); 
-            a.innerHTML = event.description;
+            a.innerHTML = event.name;
             console.log(a);
             li.append(a);
             mar.append(li);

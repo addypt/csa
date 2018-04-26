@@ -54,7 +54,8 @@
                         </div>
                     </li>
                     @else
-                        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</a>
+                        <a type="button" class="btn btn-primary" style="margin-top: 15px" data-toggle="modal" data-target="#exampleModal">Login</a>
+                        <a type="button" class="btn btn-primary" style="margin-top: 15px" href='/register'>Signup</a>
                         {{-- <a href="{{ route('register') }}">Register</a> --}}
                     @endauth
                     @endif

@@ -228,7 +228,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input name="description" type="text" class="form-control">
+                                    <textarea name="description" type="text" class="form-control"></textarea>
                                 </div>
                             </div>
                         </div>

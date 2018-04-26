@@ -27,7 +27,7 @@ class EventController extends Controller
     public function userEvents($user){
         // $id = auth()->user()->id;
         $events = Event::where('user_id', '=', $user)->get();
-        
+
         // $events = Event::where('date', '>=', date('Y/m/d', time()))->get();
         // dd($events);
         
@@ -99,7 +99,7 @@ class EventController extends Controller
         $event->lh = $request->lh;
         $event->type = $request->type;
         $event->save();
-        return $event;
+        return redirect('/dashboard');
         }
         
     }
@@ -112,7 +112,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return view('event', compact('event'));
     }
 
     /**
