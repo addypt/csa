@@ -28,3 +28,38 @@ fetch('/events/' + uid)
   .catch(function(err) {
     console.log('Fetch Error :-S', err);
   });
+
+  // document.getElementById('name').onchange(function(){
+  //   lh = document.getElementById('lh');
+  //   start = document.getElementById('start');
+  //   end = document.getElementById('end');
+  //   date = document.getElementById('date');
+  //   body = {
+  //     'lh': lh.value,
+  //     'start': start.value,
+  //     'end': end.value,
+  //     'date': date.value
+  //   }
+  //   fetch('/event/check', {body: JSON.stringify(body)}  )
+  // .then(
+  //   function(response) {
+  //     if (response.status !== 200) {
+        
+  //     }
+  //     // Examine the text in the response
+  //     response.json().then(function(data) {
+  //       console.log(data);
+  //       if(data.conflict){
+
+  //       }
+  //       else{
+          
+  //       }
+  //     });
+  //   }
+  // )
+  // .catch(function(err) {
+  //   console.log('Fetch Error :-S', err);
+  // });
+  // }
+  // );

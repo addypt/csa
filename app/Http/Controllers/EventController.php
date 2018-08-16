@@ -46,6 +46,7 @@ class EventController extends Controller
         $this->validate(request(), [
             'date' => 'required',
             'start' => 'required',
+            'end' => 'required',
             'lh' => 'required'
         ]);
         //Check for conflicting event
@@ -69,6 +70,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        //Store new event
         $this->validate(request(), [
             'name' => 'required',
             'description'  => 'required',
@@ -84,8 +86,9 @@ class EventController extends Controller
                         ->where('end', '>=', $request->end)
                         ->where('date', '=', $request->date)->get();
         if(sizeof($events) != 0){
-            $events['error'] = True;
-            return $events;
+            $event = $events[0];
+            $event['conflict'] = True;
+            return view('event', compact('event'));
         }
         else{
             //dd(auth()->user()->id);
@@ -112,6 +115,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
+        //Show particular event
         return view('event', compact('event'));
     }
 

@@ -99,11 +99,17 @@
                   
                             <div class="blog-post">
                               <h2 class="blog-post-title">{{$event->name}}</h2>
-                              <p class="blog-post-meta">{{$event->date}} by </p>
+                              <p class="blog-post-meta">{{$event->date}} at{{ $event->ln}} </p>
+                              <p class="blog-post-meta">Start time {{$event->start}}     </p>
+                              <p class="blog-post-meta">Organiser {{App\User::where('id', '=' ,$event->user_id)->get()[0]->name}}     </p>
                   
                               {{$event->description}}
                             </div><!-- /.blog-post -->
-                  
+                            @if ($event->conflict)
+                                <div class="alert alert-danger" style="margin-top: 20px">
+                                <li>Event Conflict : {{$event->name}} is being organised</li>
+                                </div>
+                            @endif
                             {{-- <div class="blog-post">
                               <h2 class="blog-post-title">Another blog post</h2>
                               <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>

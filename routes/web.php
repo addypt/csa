@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CsaHomeController@index') ;
 
 Auth::routes();
 
@@ -29,3 +27,6 @@ Route::get('/events', 'EventController@index');
 Route::post('/events/{user}', 'EventController@userEvents');
 Route::get('/events/{user}', 'EventController@userEvents');
 Route::get('/event/{event}', 'EventController@show');
+
+Route::get('/event/check', 'EventController@check');
+Route::post('/event/check', 'EventController@check');

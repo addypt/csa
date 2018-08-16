@@ -49,7 +49,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#"><img class="logo-custom" src="../assets/img/loco.jpeg" alt=""  /></a>
+                            <a class="navbar-brand" href="#"><img class="logo-custom"  alt=""  /></a>
                             <div class="navbar-brand" href="#" style="margin-top: 10px;">CSA MANAGEMENT</div>
                         </div>
                         <div class="navbar-collapse collapse move-me">
@@ -168,7 +168,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input name="date" type="Date" class="form-control">
+                                    <input name="date" id="date" type="Date" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -177,7 +177,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                     <select name="lh" class="form-control">
+                                     <select name="lh" id="lh" class="form-control">
                                           <option value="1">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
@@ -201,7 +201,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input name="start" type="Time" class="form-control">
+                                    <input name="start" id="start" type="Time" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -210,7 +210,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input name="end" type="Time" class="form-control">
+                                    <input name="end" id="end" type="Time" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa fa" aria-hidden="true"></i></span>
-                                    <input name="name" type="text" class="form-control">
+                                    <input name="name" id="name" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -258,8 +258,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Register</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                     </form>
           </div>
           <div class="modal-footer">

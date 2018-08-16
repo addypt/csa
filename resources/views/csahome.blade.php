@@ -27,12 +27,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img class="logo-custom" src="../assets/img/loco.jpeg" alt=""  /></a>
+                <a class="navbar-brand" href="#"><img class="logo-custom" src="/img/loco.jpeg" alt=""  /></a>
             	<div class="navbar-brand" href="#" style="margin-top: 10px;">CSA MANAGEMENT</div>
             </div>
             <div class="navbar-collapse collapse move-me">
                 <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="#home">HOME</a></li>
+                    <li ><a href=href="/dashboard">HOME</a></li>
                      <li><a href="#contact-sec">CONTACT</a></li>
                      @if (Route::has('login'))
                     @auth
@@ -78,52 +78,52 @@
                 <h3 class="active">What We Offer</h3>
             </li>
             <li>
-                <a href="index.html" class="active">Technical</a>
+                <a href="/" class="active">Technical</a>
             </li>
             <li>
-                <a href="index.html" class="active">Academics</a>
+                <a href="/" class="active">Academics</a>
             </li>
              <li>
-                <a href="index.html" class="active">Cultural</a>
+                <a href="/" class="active">Cultural</a>
             </li>
             <li>
-                <a href="index.html" class="active">Sports</a>
+                <a href="/" class="active">Sports</a>
             </li>
             <li>
-                <a href="index.html" class="active">Adventure</a>
+                <a href="/" class="active">Adventure</a>
             </li>
             <li>
-                <a href="index.html" class="active">Mountaineering</a>
+                <a href="/" class="active">Mountaineering</a>
             </li>
             <li>
-                <a href="index.html" class="active">Cycling</a>
+                <a href="/" class="active">Cycling</a>
             </li>
             <li>
-                <a href="index.html" class="active">SPIC MACKAY</a>
+                <a href="/" class="active">SPIC MACKAY</a>
             </li>
             <li>
-                <a href="index.html" class="active">Counselling</a>
+                <a href="/" class="active">Counselling</a>
             </li>
             <li>
-                <a href="index.html" class="active">Life Skills</a>
+                <a href="/" class="active">Life Skills</a>
             </li>
             <li>
-                <a href="index.html" class="active">Gymnasium</a>
+                <a href="/" class="active">Gymnasium</a>
             </li>
             <li>
-                <a href="index.html" class="active">Inter Nit Innovation</a>
+                <a href="/" class="active">Inter Nit Innovation</a>
             </li>
             <li>
-                <a href="index.html" class="active">Mess and Hostel Facilities</a>
+                <a href="/" class="active">Mess and Hostel Facilities</a>
             </li>
             <li>
-                <a href="index.html" class="active">Accounts and Billing</a>
+                <a href="/" class="active">Accounts and Billing</a>
             </li>
             <li>
-                <a href="index.html" class="active">Training and Placements</a>
+                <a href="/" class="active">Training and Placements</a>
             </li>
             <li>
-                <a href="index.html" class="active">Forms and Recomendations</a>
+                <a href="/" class="active">Forms and Recomendations</a>
             </li>
         </ul>
     </div>
